@@ -124,37 +124,52 @@
         <div class="relative overflow-hidden h-[90dvh]">
             <!-- Slider Wrapper -->
             <div id="slider" class="flex transition-transform duration-700 ease-in-out">
-                <img src="./imagees/hero-image.jpeg" class="w-full h-[90dvh] object-cover shrink-0" />
-                <img src="./imagees/hero-image2.jpeg" class="w-full h-[90dvh] object-cover shrink-0" />
-                <img src="./imagees/hero-image3.jpeg" class="w-full h-[90dvh] object-cover shrink-0" />
+                <img src="./imagees/hero-image.jpeg" alt="hero image" class="w-full h-[90dvh] object-cover shrink-0" />
+                <img src="./imagees/hero-image2.jpeg" alt="hero image" class="w-full h-[90dvh] object-cover shrink-0" />
+                <img src="./imagees/hero-image3.jpeg" alt="hero image" class="w-full h-[90dvh] object-cover shrink-0" />
             </div>
 
             <!-- Black Overlay -->
             <div class="absolute inset-0 bg-black/60"></div>
 
             <!-- Hero Text -->
-            <div class="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 px-4">
+            <div
+                class="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 px-4 flex flex-col items-center gap-2">
+
                 <h1 id="heroTitle"
                     class="uppercase barlow-condensed-medium text-7xl max-md:text-4xl font-bold text-center text-white transition-opacity duration-500">
 
-                    <!-- Bengali Highlight -->
+                    <!-- Bengali -->
                     <span id="heroBn" class="block text-[#facc15] text-3xl max-md:text-xl mb-1 font-semibold">
-                        পশ্চিমবঙ্গের ছৌ নৃত্য
+                        ঝাড়গ্রামের ছৌ নৃত্য
                     </span>
 
-                    <!-- English Highlight -->
-                    <span id="heroEn" class="block text-[#a7f3d0] text-2xl max-md:text-lg mb-3">
+                    <!-- English -->
+                    <span id="heroEn" class="block text-[#a7f3d0] text-2xl max-md:text-lg mb-3 px-3 py-2 rounded-md">
                         West Bengal Chhau Dance
                     </span>
 
-                    <!-- Main Title -->
+                    <!-- Main -->
                     <span id="heroMain">
                         Traditional Masked Dance of India
                     </span>
                 </h1>
-            </div>
-        </div>
 
+                <!-- Buttons -->
+                <div class="flex flex-col md:flex-row items-center gap-3">
+                    <a id="bookBtn" href="#"
+                        class="text-white px-2 py-1 md:px-3 md:py-2 bg-[#8ac908] uppercase text-md md:text-xl rounded-md barlow-condensed-medium tracking-widest">
+                        Book Now
+                    </a>
+
+                    <a id="moreBtn" href="#"
+                        class="px-2 py-1 md:px-3 md:py-2 border-2 border-white text-white uppercase text-md md:text-xl rounded-md barlow-condensed-medium">
+                        More About
+                    </a>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <!-- JS Script Added  -->
@@ -191,25 +206,41 @@
     <script>
         const slider = document.getElementById("slider");
         const heroTitle = document.getElementById("heroTitle");
+
         const heroBn = document.getElementById("heroBn");
         const heroEn = document.getElementById("heroEn");
         const heroMain = document.getElementById("heroMain");
 
+        const bookBtn = document.getElementById("bookBtn");
+        const moreBtn = document.getElementById("moreBtn");
+
         const slidesContent = [
             {
-                bn: "পশ্চিমবঙ্গের ছৌ নৃত্য",
+                bn: "ঝাড়গ্রামের ছৌ নৃত্য",
                 en: "West Bengal Chhau Dance",
-                main: "Traditional Masked Dance of India"
+                main: "Traditional Masked Dance of India",
+                bookText: "Book Now",
+                bookLink: "#book-show",
+                moreText: "More About Chhau",
+                moreLink: "#about-chhau"
             },
             {
                 bn: "শক্তি ও ছন্দের শিল্প",
-                en: "Power, Rhythm & Martial Art",
-                main: "Experience the Spirit of Chhau Dance"
+                en: "Power & Martial Art",
+                main: "Experience the Spirit of Chhau Dance",
+                bookText: "Join Workshop",
+                bookLink: "#workshop",
+                moreText: "Learn the Art",
+                moreLink: "#learn-chhau"
             },
             {
                 bn: "বাঙালির সাংস্কৃতিক ঐতিহ্য",
                 en: "Cultural Heritage of Bengal",
-                main: "Where Tradition Comes Alive"
+                main: "Preserving an Ancient Dance Form",
+                bookText: "Watch Performance",
+                bookLink: "#performance",
+                moreText: "Explore Heritage",
+                moreLink: "#heritage"
             }
         ];
 
@@ -221,18 +252,26 @@
             // Slide Image
             slider.style.transform = `translateX(-${index * 100}%)`;
 
-            // Fade Text
+            // Fade Content
             heroTitle.classList.add("opacity-0");
 
             setTimeout(() => {
                 heroBn.textContent = slidesContent[index].bn;
                 heroEn.textContent = slidesContent[index].en;
                 heroMain.textContent = slidesContent[index].main;
+
+                bookBtn.textContent = slidesContent[index].bookText;
+                bookBtn.href = slidesContent[index].bookLink;
+
+                moreBtn.textContent = slidesContent[index].moreText;
+                moreBtn.href = slidesContent[index].moreLink;
+
                 heroTitle.classList.remove("opacity-0");
             }, 300);
 
         }, 4000);
     </script>
+
 
 
 </body>
