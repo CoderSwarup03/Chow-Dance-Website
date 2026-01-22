@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chow-Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+
+    <style>
+        .dm-sans {
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .barlow-condensed-medium {
+            font-family: "Barlow Condensed", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-[#ffffff] py-2">
+        <nav class="max-w-[95%] mx-auto flex justify-between items-center gap-3">
+            <div class="flex items-center gap-2">
+                <img src="./imagees/logo2.webp" alt="logo" class="h-[85px] w-[85px] rounded-full object-cover">
+                <h2 class="hidden md:block dm-sans uppercase text-[#3b3b3b] text-2xl font-bold">Kechanda SatSanga Chow
+                </h2>
+            </div>
+            <div class="hidden md:block">
+                <ul class="flex items-center gap-3 dm-sans uppercase text-lg font-semibold">
+
+                    <li>
+                        <a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Home</a>
+                    </li>
+
+                    <!-- Pages Dropdown -->
+                    <li class="relative group">
+                        <a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">
+                            Pages
+                        </a>
+
+                        <!-- Dropdown Menu -->
+                        <ul class="absolute left-0 top-full mt-2 w-40 bg-white shadow-lg rounded-md
+                              opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                                  transition-all duration-300">
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-[#3b3b3b] hover:bg-[#8ec92b] hover:text-white">
+                                    About Us
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-[#3b3b3b] hover:bg-[#8ec92b] hover:text-white">
+                                    Our History
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Team Details</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Blog</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="flex items-center gap-3 ">
+                <!-- <button
+                    class="bg-[#8ac908] px-3 py-2 rounded-md text-white dm-sans uppercase font-semibold barlow-condensed-medium tracking-widest">Book
+                    Now</button> -->
+                <button class="bg-[#8ac908] px-3 py-2 rounded-md text-white
+         dm-sans uppercase font-semibold tracking-widest
+         barlow-condensed-medium
+
+         transition-colors duration-200 ease-in-out
+         hover:bg-[#7bb907]
+
+         transition-transform duration-300 delay-150 ease-in-out
+         hover:scale-105
+
+         transition-shadow duration-300 delay-300 ease-in-out
+         hover:shadow-lg
+
+         active:scale-95">
+                    Book Now
+                </button>
+
+
+
+                <!-- hemberguer icon -->
+                <i class="hgi hgi-stroke hgi-menu-01 text-xl font-bold cursor-pointer md:hidden"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- hero section -->
+    <section>
+        <div class="relative overflow-hidden h-[90dvh]">
+            <!-- Slider Wrapper -->
+            <div id="slider" class="flex transition-transform duration-700 ease-in-out">
+                <img src="./imagees/hero-image.jpeg" class="w-full h-[90dvh] object-cover shrink-0" />
+                <img src="./imagees/hero-image2.jpeg" class="w-full h-[90dvh] object-cover shrink-0" />
+                <img src="./imagees/hero-image3.jpeg" class="w-full h-[90dvh] object-cover shrink-0" />
+            </div>
+
+            <!-- Black Overlay -->
+            <div class="absolute inset-0 bg-black/50"></div>
+
+            <!-- Hero Text -->
+            <div class="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 px-4">
+                <h1 id="heroTitle"
+                    class="uppercase barlow-condensed-medium text-7xl max-md:text-4xl font-bold text-center text-white transition-opacity duration-500">
+                    West Bengal Chhau Dance | Traditional Masked Dance of India
+                </h1>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- JS Script Added  -->
+
+    <script>
+        const slider = document.getElementById("slider");
+        const heroTitle = document.getElementById("heroTitle");
+
+        const titles = [
+            "West Bengal Chhau Dance | Traditional Masked Dance of India",
+            "Experience the Power & Grace of Chhau Dance",
+            "Chhau Dance – Heritage of West Bengal"
+        ];
+
+        let index = 0;
+        const totalSlides = titles.length;
+
+        setInterval(() => {
+            index = (index + 1) % totalSlides;
+
+            // Slide Image
+            slider.style.transform = `translateX(-${index * 100}%)`;
+
+            // Fade Text
+            heroTitle.classList.add("opacity-0");
+
+            setTimeout(() => {
+                heroTitle.textContent = titles[index];
+                heroTitle.classList.remove("opacity-0");
+            }, 300);
+
+        }, 4000); // 4 seconds
+    </script>
+
+
+</body>
+
+</html>
