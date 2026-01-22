@@ -51,7 +51,7 @@
                 <ul class="flex items-center gap-3 dm-sans uppercase text-lg font-semibold">
                     <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Home</a></li>
                     <li class="relative group">
-                        <a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Pages</a>
+                        <a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b] uppercase">Pages</a>
                         <ul
                             class="absolute left-0 top-full mt-2 w-40 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                             <li><a href="#"
@@ -167,8 +167,12 @@
     <section class="max-w-[85%] mx-auto mt-10 flex flex-col md:flex-row gap-6">
         <img src="./imagees/about-image.jpeg" alt="about image"
             class="h-[60vh] md:h-[80vh] w-[80vh] object-cover rounded-md">
-        <div class="flex flex-col gap-3">
-            <span class="bg-[#f4f9f6] px-3 py-2 rounded-md text-black dm-sans uppercase font-semibold">About Us</span>
+
+        <div class="flex flex-col gap-3 ">
+            <h4
+                class="bg-[#f4f9f6] px-3 py-2 rounded-md text-black dm-sans uppercase font-semibold w-[120px] md:w-[160px] text-center">
+                About Us
+            </h4>
             <p class="text-gray-700 leading-relaxed dm-sans">
                 <strong>ওস্তাদ বাপি মাহাতো</strong> ঝাড়গ্রামের ঐতিহ্যবাহী ছৌ নৃত্যের একজন প্রখ্যাত শিল্পী ও গুরু।
                 তিনি দীর্ঘদিন ধরে ছৌ নৃত্যের চর্চা, প্রশিক্ষণ এবং মঞ্চ পরিবেশনার মাধ্যমে এই লোকশিল্পকে দেশ-বিদেশে পরিচিত
@@ -182,22 +186,125 @@
                 এই নৃত্য এক অনন্য নাটকীয় আবহ সৃষ্টি করে।
             </p>
 
-            <p class="text-gray-700 leading-relaxed dm-sans mt-3">
+            <!-- Short Description -->
+            <p class="text-gray-700 leading-relaxed dm-sans">
                 <strong>Ostad Bapi Mahata</strong> is a renowned Chhau dance artist and guru from Jhargram, West Bengal.
                 With years of dedication to performance and training, he has played a vital role in preserving and
                 promoting
-                this traditional masked dance form across India and beyond. His art reflects power, rhythm, discipline,
-                and deep cultural heritage.
+                this traditional masked dance form across India and beyond.
             </p>
-            <p class="text-gray-700 leading-relaxed dm-sans mt-3">
+
+            <!-- Hidden Extended Content -->
+            <div id="moreText" class="text-gray-700 leading-relaxed dm-sans mt-3 hidden">
+                His art reflects power, rhythm, discipline, and deep cultural heritage.
                 Chhau dance is not merely a performance but a disciplined practice.
                 Dancers train for years to develop strength, flexibility, and mental focus.
                 The use of masks, vibrant costumes, and rhythmic drums creates a powerful
                 theatrical experience that captivates audiences.
-            </p>
+            </div>
+
+            <!-- Read More Button -->
+            <button id="readMoreBtn" class="text-[#8ec92b] font-semibold mt-2 dm-sans hover:underline">
+                Read More
+            </button>
+            <div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- our services -->
+    <section class="max-w-[85%] mx-auto mt-16">
+        <h2 class="text-xl md:text-3xl dm-sans font-bold text-[#3b3b3b] mb-6 uppercase text-center">Our Services</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Service 1 -->
+            <div class="bg-[#f4f9f6] p-5 rounded-lg shadow hover:shadow-lg transition duration-300 flex flex-col gap-3">
+
+                <!-- Image Wrapper -->
+                <div class="relative overflow-hidden rounded-md group">
+                    <img src="./imagees/stage-program.jpeg" alt="stage program"
+                        class="w-full h-[40vh] object-cover transition-transform duration-500 group-hover:scale-110">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-black/60
+                    opacity-0 group-hover:opacity-100
+                    transition-opacity duration-500
+                    flex items-center justify-center text-center px-4">
+
+                        <p class="text-white dm-sans text-lg font-semibold">
+                            Traditional Chhau Stage Performances
+                        </p>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold dm-sans text-[#3b3b3b] mb-2">
+                    Stage Performances
+                </h3>
+
+                <p class="text-gray-700 dm-sans leading-relaxed">
+                    Live traditional Chhau dance performances for events, cultural festivals, and private functions.
+                </p>
+            </div>
+
+
+            <!-- Service 2 -->
+            <div class="bg-[#f4f9f6] p-5 rounded-lg shadow hover:shadow-lg transition duration-300">
+                <img src="./imagees/work-shop-trainning.jpeg" alt="workshop tranning" class="h-[40vh] rounded-md">
+                <h3 class="text-xl font-semibold dm-sans text-[#3b3b3b] mb-2">Workshops & Training</h3>
+                <p class="text-gray-700 dm-sans leading-relaxed">
+                    Professional Chhau dance workshops and training sessions for beginners and advanced learners.
+                </p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-[#f4f9f6] p-5 rounded-lg shadow hover:shadow-lg transition duration-300">
+                <h3 class="text-xl font-semibold dm-sans text-[#3b3b3b] mb-2">Event & Festival Shows</h3>
+                <p class="text-gray-700 dm-sans leading-relaxed">
+                    Organizing Chhau dance performances for cultural events, school programs, and community festivals.
+                </p>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-[#f4f9f6] p-5 rounded-lg shadow hover:shadow-lg transition duration-300">
+                <h3 class="text-xl font-semibold dm-sans text-[#3b3b3b] mb-2">Customized Dance Programs</h3>
+                <p class="text-gray-700 dm-sans leading-relaxed">
+                    Tailored Chhau dance performances for weddings, corporate events, and special celebrations.
+                </p>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="bg-[#f4f9f6] p-5 rounded-lg shadow hover:shadow-lg transition duration-300">
+                <h3 class="text-xl font-semibold dm-sans text-[#3b3b3b] mb-2">Cultural Promotion</h3>
+                <p class="text-gray-700 dm-sans leading-relaxed">
+                    Promoting traditional Chhau dance nationally and internationally through performances and workshops.
+                </p>
+            </div>
 
         </div>
     </section>
+
+
+
+    <!-- script added from here -->
+    <script>
+        const readMoreBtn = document.getElementById("readMoreBtn");
+        const moreText = document.getElementById("moreText");
+
+        readMoreBtn.addEventListener("click", () => {
+            moreText.classList.toggle("hidden");
+
+            if (moreText.classList.contains("hidden")) {
+                readMoreBtn.textContent = "Read More";
+            } else {
+                readMoreBtn.textContent = "Read Less";
+            }
+        });
+    </script>
+
+
 
     <!-- JS Script Added  -->
     <script>
