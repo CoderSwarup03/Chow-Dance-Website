@@ -34,88 +34,81 @@
     </style>
 </head>
 
+
 <body>
-    <header class="bg-[#ffffff] py-2">
-        <nav class="max-w-[95%] mx-auto flex justify-between items-center gap-3">
+    <header class="bg-white py-2">
+        <div class="max-w-[95%] mx-auto flex justify-between items-center gap-3">
+            <!-- Logo -->
             <div class="flex items-center gap-2">
                 <img src="./imagees/logo2.webp" alt="logo" class="h-[85px] w-[85px] rounded-full object-cover">
-                <h2 class="hidden md:block dm-sans uppercase text-[#3b3b3b] text-2xl font-bold">Kechanda SatSanga Chow
+                <h2 class="hidden md:block dm-sans uppercase text-[#3b3b3b] text-2xl font-bold">
+                    Kechanda SatSanga Chow
                 </h2>
             </div>
-            <div class="hidden md:block z-50">
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:block z-50">
                 <ul class="flex items-center gap-3 dm-sans uppercase text-lg font-semibold">
-
-                    <li>
-                        <a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Home</a>
-                    </li>
-
-                    <!-- Pages Dropdown -->
+                    <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Home</a></li>
                     <li class="relative group">
-                        <a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">
-                            Pages
-                        </a>
-
-                        <!-- Dropdown Menu -->
-                        <ul class="absolute left-0 top-full mt-2 w-40 bg-white shadow-lg rounded-md
-                              opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                                  transition-all duration-300">
-                            <li>
-                                <a href="#" class="block px-4 py-2 text-[#3b3b3b] hover:bg-[#8ec92b] hover:text-white">
-                                    About Us
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="block px-4 py-2 text-[#3b3b3b] hover:bg-[#8ec92b] hover:text-white">
-                                    Our History
-                                </a>
-                            </li>
+                        <a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Pages</a>
+                        <ul
+                            class="absolute left-0 top-full mt-2 w-40 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-[#3b3b3b] hover:bg-[#8ec92b] hover:text-white">About
+                                    Us</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-[#3b3b3b] hover:bg-[#8ec92b] hover:text-white">Our
+                                    History</a></li>
                         </ul>
                     </li>
-
-                    <li>
-                        <a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Services</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Team Details</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Blog</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Contact</a>
-                    </li>
+                    <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Services</a></li>
+                    <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Team Details</a></li>
+                    <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Blog</a></li>
+                    <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Contact</a></li>
                 </ul>
-
             </div>
-            <div class="flex items-center gap-3 ">
-                <!-- <button
-                    class="bg-[#8ac908] px-3 py-2 rounded-md text-white dm-sans uppercase font-semibold barlow-condensed-medium tracking-widest">Book
-                    Now</button> -->
+
+            <!-- Book Now & Hamburger -->
+            <div class="flex items-center gap-3">
                 <a href="https://wa.me/919732693720?text=নমস্কার%20আমি%20ছৌ%20নৃত্যের%20একটি%20অনুষ্ঠান%20বুক%20করতে%20চাই%20|%20Hello%20I%20want%20to%20book%20a%20Chhau%20Dance%20performance"
                     target="_blank" rel="noopener noreferrer">
-
-                    <button class="bg-[#8ac908] px-3 py-2 rounded-md text-white
-        dm-sans uppercase font-semibold tracking-widest
-        barlow-condensed-medium transition-colors duration-200 ease-in-out
-        hover:bg-[#7bb907]
-        transition-transform duration-300 delay-150 ease-in-out
-        hover:scale-105
-        transition-shadow duration-300 delay-300 ease-in-out
-        hover:shadow-lg
-        active:scale-95">
+                    <button
+                        class=" barlow-condensed-medium bg-[#8ac908] px-3 py-2 rounded-md text-white dm-sans uppercase font-semibold tracking-widest hover:bg-[#7bb907] transition duration-300 hover:scale-105 hover:shadow-lg active:scale-95">
                         Book Now
                     </button>
                 </a>
 
-
-                <!-- hemberguer icon -->
-                <i class="hgi hgi-stroke hgi-menu-01 text-xl font-bold cursor-pointer md:hidden"></i>
+                <!-- Hamburger Icon -->
+                <button id="menuBtn" class="lg:hidden text-black text-2xl">
+                    ☰
+                </button>
             </div>
-        </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="fixed top-0 left-0 w-full h-screen bg-white z-50 -translate-y-full transition-transform duration-300 flex flex-col">
+            <div class="flex justify-end p-4">
+                <button id="closeMenu" class="text-3xl text-[#8ec92b]">✕</button>
+            </div>
+            <ul class="flex flex-col items-center gap-6 dm-sans uppercase text-lg font-semibold mt-10">
+                <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Home</a></li>
+                <li class="w-full text-center">
+                    <button id="pagesToggle" class="w-full text-[#8ec92b] hover:text-[#3b3b3b]">Pages ▼</button>
+                    <ul id="pagesMenu" class="hidden mt-3 bg-gray-100 rounded-md">
+                        <li><a href="#" class="block py-2 text-[#3b3b3b] hover:bg-[#8ec92b] hover:text-white">About
+                                Us</a></li>
+                        <li><a href="#" class="block py-2 text-[#3b3b3b] hover:bg-[#8ec92b] hover:text-white">Our
+                                History</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Services</a></li>
+                <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Team Details</a></li>
+                <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Blog</a></li>
+                <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Contact</a></li>
+            </ul>
+        </div>
     </header>
     <!-- hero section -->
     <section>
@@ -274,6 +267,32 @@
             }, 300);
 
         }, 4000);
+    </script>
+
+    <!-- menu script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuBtn = document.getElementById("menuBtn");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const closeMenu = document.getElementById("closeMenu");
+            const pagesToggle = document.getElementById("pagesToggle");
+            const pagesMenu = document.getElementById("pagesMenu");
+
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.remove("-translate-y-full");
+                mobileMenu.classList.add("translate-y-0");
+            });
+
+            closeMenu.addEventListener("click", () => {
+                mobileMenu.classList.add("-translate-y-full");
+                mobileMenu.classList.remove("translate-y-0");
+                pagesMenu.classList.add("hidden");
+            });
+
+            pagesToggle.addEventListener("click", () => {
+                pagesMenu.classList.toggle("hidden");
+            });
+        });
     </script>
 
 
