@@ -42,7 +42,7 @@
                 <h2 class="hidden md:block dm-sans uppercase text-[#3b3b3b] text-2xl font-bold">Kechanda SatSanga Chow
                 </h2>
             </div>
-            <div class="hidden md:block">
+            <div class="hidden md:block z-50">
                 <ul class="flex items-center gap-3 dm-sans uppercase text-lg font-semibold">
 
                     <li>
@@ -172,37 +172,43 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section class="max-w-[85%] mx-auto mt-10 flex flex-col md:flex-row gap-6">
+        <img src="./imagees/about-image.jpeg" alt="about image"
+            class="h-[60vh] md:h-[80vh] w-[80vh] object-cover rounded-md">
+        <div class="flex flex-col gap-3">
+            <span class="bg-[#f4f9f6] px-3 py-2 rounded-md text-black dm-sans uppercase font-semibold">About Us</span>
+            <p class="text-gray-700 leading-relaxed dm-sans">
+                <strong>ওস্তাদ বাপি মাহাতো</strong> ঝাড়গ্রামের ঐতিহ্যবাহী ছৌ নৃত্যের একজন প্রখ্যাত শিল্পী ও গুরু।
+                তিনি দীর্ঘদিন ধরে ছৌ নৃত্যের চর্চা, প্রশিক্ষণ এবং মঞ্চ পরিবেশনার মাধ্যমে এই লোকশিল্পকে দেশ-বিদেশে পরিচিত
+                করে তুলেছেন।
+                তাঁর নৃত্যে শক্তি, ছন্দ এবং শাস্ত্রীয় শৃঙ্খলার এক অনন্য সমন্বয় দেখা যায়।
+            </p>
+            <p class="text-gray-700 leading-relaxed dm-sans">
+                ঝাড়গ্রামের ছৌ নৃত্য শুধু একটি নৃত্যশৈলী নয়, এটি এক ধরনের সাধনা।
+                নৃত্যশিল্পীরা বছরের পর বছর কঠোর অনুশীলনের মাধ্যমে শারীরিক শক্তি, নমনীয়তা
+                এবং মানসিক সংযম অর্জন করেন। মুখোশ, পোশাক এবং ঢোল-ঢাকের তালে
+                এই নৃত্য এক অনন্য নাটকীয় আবহ সৃষ্টি করে।
+            </p>
+
+            <p class="text-gray-700 leading-relaxed dm-sans mt-3">
+                <strong>Ostad Bapi Mahata</strong> is a renowned Chhau dance artist and guru from Jhargram, West Bengal.
+                With years of dedication to performance and training, he has played a vital role in preserving and
+                promoting
+                this traditional masked dance form across India and beyond. His art reflects power, rhythm, discipline,
+                and deep cultural heritage.
+            </p>
+            <p class="text-gray-700 leading-relaxed dm-sans mt-3">
+                Chhau dance is not merely a performance but a disciplined practice.
+                Dancers train for years to develop strength, flexibility, and mental focus.
+                The use of masks, vibrant costumes, and rhythmic drums creates a powerful
+                theatrical experience that captivates audiences.
+            </p>
+
+        </div>
+    </section>
+
     <!-- JS Script Added  -->
-
-    <!-- <script>
-        const slider = document.getElementById("slider");
-        const heroTitle = document.getElementById("heroTitle");
-
-        const titles = [
-            "West Bengal Chhau Dance | Traditional Masked Dance of India",
-            "Experience the Power & Grace of Chhau Dance",
-            "Chhau Dance – Heritage of West Bengal"
-        ];
-
-        let index = 0;
-        const totalSlides = titles.length;
-
-        setInterval(() => {
-            index = (index + 1) % totalSlides;
-
-            // Slide Image
-            slider.style.transform = `translateX(-${index * 100}%)`;
-
-            // Fade Text
-            heroTitle.classList.add("opacity-0");
-
-            setTimeout(() => {
-                heroTitle.textContent = titles[index];
-                heroTitle.classList.remove("opacity-0");
-            }, 300);
-
-        }, 4000); // 4 seconds
-    </script> -->
     <script>
         const slider = document.getElementById("slider");
         const heroTitle = document.getElementById("heroTitle");
