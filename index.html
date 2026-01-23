@@ -18,6 +18,12 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
 
+    <!-- slider -->
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
     <style>
         .dm-sans {
             font-family: "DM Sans", sans-serif;
@@ -62,7 +68,7 @@
                                     History</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Services</a></li>
+                    <li><a href="./services.html" class="text-[#8ec92b] hover:text-[#3b3b3b]">Services</a></li>
                     <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Team Details</a></li>
                     <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Blog</a></li>
                     <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Contact</a></li>
@@ -103,7 +109,7 @@
                                 History</a></li>
                     </ul>
                 </li>
-                <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Services</a></li>
+                <li><a href="./services.html" class="text-[#8ec92b] hover:text-[#3b3b3b]">Services</a></li>
                 <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Team Details</a></li>
                 <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Blog</a></li>
                 <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Contact</a></li>
@@ -231,135 +237,95 @@
                 <div class="w-24 h-1 bg-[#8ec92b] mx-auto mt-5 rounded-full"></div>
             </div>
 
-            <!-- Services Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Swiper -->
+            <div class="swiper servicesSwiper">
+                <div class="swiper-wrapper">
 
-                <!-- Service 1 -->
-                <div
-                    class="group bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 flex flex-col gap-4">
-
-                    <div class="relative overflow-hidden rounded-lg">
-                        <img src="./imagees/stage-program.jpeg" alt="Stage performance Chhau dance"
-                            class="h-[40vh] w-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <!-- Service 1 -->
+                    <div class="swiper-slide">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+                            class="group bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col gap-4">
+                            <div class="relative overflow-hidden rounded-lg">
+                                <img src="./imagees/stage-program.jpeg" alt=""
+                                    class="h-[40vh] w-full object-cover transform group-hover:scale-110 transition duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            </div>
+                            <h3 class="text-xl font-semibold dm-sans text-[#3b3b3b] group-hover:text-[#8ec92b]">
+                                Stage Performances / মঞ্চ পরিবেশনা
+                            </h3>
+                            <p class="text-gray-700 dm-sans">
+                                Live traditional Chhau dance performances.
+                                <br><br>
+                                ঐতিহ্যবাহী ছৌ নৃত্যের পরিবেশনা।
+                            </p>
                         </div>
                     </div>
 
-                    <h3
-                        class="text-xl font-semibold dm-sans text-[#3b3b3b] group-hover:text-[#8ec92b] transition duration-300">
-                        Stage Performances / মঞ্চ পরিবেশনা
-                    </h3>
-
-                    <p class="text-gray-700 dm-sans leading-relaxed">
-                        Live traditional Chhau dance performances for events, cultural festivals, and private functions.
-                        <br><br>
-                        বিভিন্ন অনুষ্ঠান, সাংস্কৃতিক উৎসব এবং ব্যক্তিগত অনুষ্ঠানের জন্য ঐতিহ্যবাহী ছৌ নৃত্যের সরাসরি
-                        পরিবেশনা।
-                    </p>
-                </div>
-
-                <!-- Service 2 -->
-                <div
-                    class="group bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 flex flex-col gap-4">
-
-                    <div class="relative overflow-hidden rounded-lg">
-                        <img src="./imagees/work-shop-trainning.jpeg" alt="Chhau dance workshop training"
-                            class="h-[40vh] w-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <!-- Service 2 -->
+                    <div class="swiper-slide">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+                            class="group bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col gap-4">
+                            <div class="relative overflow-hidden rounded-lg">
+                                <img src="./imagees/work-shop-trainning.jpeg" alt=""
+                                    class="h-[40vh] w-full object-cover transform group-hover:scale-110 transition duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            </div>
+                            <h3 class="text-xl font-semibold dm-sans text-[#3b3b3b] group-hover:text-[#8ec92b]">
+                                Workshops & Training / কর্মশালা
+                            </h3>
+                            <p class="text-gray-700 dm-sans">
+                                Professional Chhau dance training.
+                                <br><br>
+                                পেশাদার ছৌ নৃত্য প্রশিক্ষণ।
+                            </p>
                         </div>
                     </div>
 
-                    <h3
-                        class="text-xl font-semibold dm-sans text-[#3b3b3b] group-hover:text-[#8ec92b] transition duration-300">
-                        Workshops & Training / কর্মশালা ও প্রশিক্ষণ
-                    </h3>
-
-                    <p class="text-gray-700 dm-sans leading-relaxed">
-                        Professional Chhau dance workshops and training sessions for beginners and advanced learners.
-                        <br><br>
-                        নতুন ও অভিজ্ঞ শিক্ষার্থীদের জন্য পেশাদার ছৌ নৃত্যের প্রশিক্ষণ ও কর্মশালা।
-                    </p>
-                </div>
-
-                <!-- Service 3 -->
-                <div
-                    class="group bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 flex flex-col gap-4">
-
-                    <div class="relative overflow-hidden rounded-lg">
-                        <img src="./imagees/program2.jpeg" alt="Chhau dance festival show"
-                            class="h-[40vh] w-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <!-- Service 3 -->
+                    <div class="swiper-slide">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+                            class="group bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col gap-4">
+                            <div class="relative overflow-hidden rounded-lg">
+                                <img src="./imagees/program2.jpeg" alt=""
+                                    class="h-[40vh] w-full object-cover transform group-hover:scale-110 transition duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            </div>
+                            <h3 class="text-xl font-semibold dm-sans text-[#3b3b3b] group-hover:text-[#8ec92b]">
+                                Festival Shows / উৎসব পরিবেশনা
+                            </h3>
+                            <p class="text-gray-700 dm-sans">
+                                Cultural & festival Chhau programs.
+                                <br><br>
+                                উৎসব ভিত্তিক ছৌ নৃত্য পরিবেশনা।
+                            </p>
                         </div>
                     </div>
 
-                    <h3
-                        class="text-xl font-semibold dm-sans text-[#3b3b3b] group-hover:text-[#8ec92b] transition duration-300">
-                        Event & Festival Shows / অনুষ্ঠান ও উৎসব পরিবেশনা
-                    </h3>
-
-                    <p class="text-gray-700 dm-sans leading-relaxed">
-                        Organizing Chhau dance performances for cultural events, school programs, and community
-                        festivals.
-                        <br><br>
-                        সাংস্কৃতিক অনুষ্ঠান, স্কুল প্রোগ্রাম এবং সামাজিক উৎসবের জন্য ছৌ নৃত্য পরিবেশনা।
-                    </p>
-                </div>
-
-                <!-- Service 4 -->
-                <div
-                    class="group bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 flex flex-col gap-4">
-
-                    <div class="relative overflow-hidden rounded-lg">
-                        <img src="./imagees/calchural-program.jpeg" alt="Customized Chhau dance program"
-                            class="h-[40vh] w-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <!-- Repeat remaining services same way -->
+                    <div class="swiper-slide">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+                            class="group bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col gap-4">
+                            <div class="relative overflow-hidden rounded-lg">
+                                <img src="./imagees/program2.jpeg" alt=""
+                                    class="h-[40vh] w-full object-cover transform group-hover:scale-110 transition duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            </div>
+                            <h3 class="text-xl font-semibold dm-sans text-[#3b3b3b] group-hover:text-[#8ec92b]">
+                                Festival Shows / উৎসব পরিবেশনা
+                            </h3>
+                            <p class="text-gray-700 dm-sans">
+                                Cultural & festival Chhau programs.
+                                <br><br>
+                                উৎসব ভিত্তিক ছৌ নৃত্য পরিবেশনা।
+                            </p>
                         </div>
                     </div>
-
-                    <h3
-                        class="text-xl font-semibold dm-sans text-[#3b3b3b] group-hover:text-[#8ec92b] transition duration-300">
-                        Customized Dance Programs / কাস্টম নৃত্য পরিবেশনা
-                    </h3>
-
-                    <p class="text-gray-700 dm-sans leading-relaxed">
-                        Tailored Chhau dance performances for weddings, corporate events, and special celebrations.
-                        <br><br>
-                        বিবাহ, কর্পোরেট অনুষ্ঠান ও বিশেষ উৎসবের জন্য কাস্টম ছৌ নৃত্য পরিবেশনা।
-                    </p>
                 </div>
-
-                <!-- Service 5 -->
-                <div
-                    class="group bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 flex flex-col gap-4">
-
-                    <div class="relative overflow-hidden rounded-lg">
-                        <img src="./imagees/program3.jpeg" alt="Chhau dance cultural promotion"
-                            class="h-[40vh] w-full object-cover transform group-hover:scale-110 transition duration-700">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
-                        </div>
-                    </div>
-
-                    <h3
-                        class="text-xl font-semibold dm-sans text-[#3b3b3b] group-hover:text-[#8ec92b] transition duration-300">
-                        Cultural Promotion / সাংস্কৃতিক প্রচার
-                    </h3>
-
-                    <p class="text-gray-700 dm-sans leading-relaxed">
-                        Promoting traditional Chhau dance nationally and internationally through performances and
-                        workshops.
-                        <br><br>
-                        পরিবেশনা ও প্রশিক্ষণের মাধ্যমে দেশ-বিদেশে ঐতিহ্যবাহী ছৌ নৃত্যের প্রচার।
-                    </p>
-                </div>
-
             </div>
+
         </div>
     </section>
+
 
 
 
@@ -478,6 +444,30 @@
         });
     </script>
 
+    <!--  -->
+    <script>
+        new Swiper(".servicesSwiper", {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            speed: 6000, // smooth speed
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1.2,
+                },
+                768: {
+                    slidesPerView: 2.2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    </script>
 
 
 </body>

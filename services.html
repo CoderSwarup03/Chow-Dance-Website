@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chow-Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+
+    <style>
+        .dm-sans {
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .barlow-condensed-medium {
+            font-family: "Barlow Condensed", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header class="bg-white py-2">
+        <div class="max-w-[95%] mx-auto flex justify-between items-center gap-3">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <img src="./imagees/logo2.webp" alt="logo" class="h-[85px] w-[85px] rounded-full object-cover">
+                <h2 class="hidden md:block dm-sans uppercase text-[#3b3b3b] text-2xl font-bold">
+                    Kechanda SatSanga Chow
+                </h2>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:block z-50">
+                <ul class="flex items-center gap-3 dm-sans uppercase text-lg font-semibold">
+                    <li><a href="./index.html" class="text-[#8ec92b] hover:text-[#3b3b3b]">Home</a></li>
+                    <li class="relative group">
+                        <a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b] uppercase">Pages</a>
+                        <ul
+                            class="absolute left-0 top-full mt-2 w-40 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-[#3b3b3b] hover:bg-[#8ec92b] hover:text-white">About
+                                    Us</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-[#3b3b3b] hover:bg-[#8ec92b] hover:text-white">Our
+                                    History</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./services.html" class="text-[#8ec92b] hover:text-[#3b3b3b]">Services</a></li>
+                    <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Team Details</a></li>
+                    <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Blog</a></li>
+                    <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Book Now & Hamburger -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/919732693720?text=নমস্কার%20আমি%20ছৌ%20নৃত্যের%20একটি%20অনুষ্ঠান%20বুক%20করতে%20চাই%20|%20Hello%20I%20want%20to%20book%20a%20Chhau%20Dance%20performance"
+                    target="_blank" rel="noopener noreferrer">
+                    <button
+                        class=" barlow-condensed-medium bg-[#8ac908] px-3 py-2 rounded-md text-white dm-sans uppercase font-semibold tracking-widest hover:bg-[#7bb907] transition duration-300 hover:scale-105 hover:shadow-lg active:scale-95">
+                        Book Now
+                    </button>
+                </a>
+
+                <!-- Hamburger Icon -->
+                <button id="menuBtn" class="lg:hidden text-black text-2xl">
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="fixed top-0 left-0 w-full h-screen bg-white z-50 -translate-y-full transition-transform duration-300 flex flex-col">
+            <div class="flex justify-end p-4">
+                <button id="closeMenu" class="text-3xl text-[#8ec92b]">✕</button>
+            </div>
+            <ul class="flex flex-col items-center gap-6 dm-sans uppercase text-lg font-semibold mt-10">
+                <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Home</a></li>
+                <li class="w-full text-center">
+                    <button id="pagesToggle" class="w-full text-[#8ec92b] hover:text-[#3b3b3b]">Pages ▼</button>
+                    <ul id="pagesMenu" class="hidden mt-3 bg-gray-100 rounded-md">
+                        <li><a href="#" class="block py-2 text-[#3b3b3b] hover:bg-[#8ec92b] hover:text-white">About
+                                Us</a></li>
+                        <li><a href="#" class="block py-2 text-[#3b3b3b] hover:bg-[#8ec92b] hover:text-white">Our
+                                History</a></li>
+                    </ul>
+                </li>
+                <li><a href="./services.html" class="text-[#8ec92b] hover:text-[#3b3b3b]">Services</a></li>
+                <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Team Details</a></li>
+                <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Blog</a></li>
+                <li><a href="#" class="text-[#8ec92b] hover:text-[#3b3b3b]">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- services section -->
+    <section class="relative">
+        <!-- Background Image -->
+        <img src="./imagees/about-us2.jpeg" alt="Chhau Dance Services Banner" class="w-full h-[60vh] object-cover">
+
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <!-- Content -->
+        <div class="absolute inset-0 flex items-center">
+            <div class="max-w-7xl mx-auto px-4 w-full">
+                <div class="max-w-xl text-white">
+
+                    <!-- Breadcrumb -->
+                    <p class="uppercase dm-sans tracking-widest text-sm text-[#8ec92b]">
+                        Home / Services
+                    </p>
+
+                    <!-- Title -->
+                    <h1 class="mt-3 text-4xl md:text-5xl font-bold barlow-condensed-medium uppercase leading-tight">
+                        Our Chhau Dance Services
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <!-- services details -->
+        <div class="max-w-[85%] mx-auto flex items-center gap-3">
+            <div class="w-[30%]"></div>
+            <div class="w-[70%]"></div>
+        </div>
+    </section>
+
+
+    <!-- our services -->
+    <section class="py-16 bg-gradient-to-b from-[#f9fbfa] to-white">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <!-- Section Heading -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold uppercase barlow-condensed-medium text-[#3b3b3b]">
+                    Our Services
+                </h2>
+                <p class="mt-4 text-gray-600 dm-sans max-w-2xl mx-auto">
+                    Celebrating the rich heritage of Chhau Dance through performances, training, and cultural promotion.
+                    <br>
+                    পরিবেশনা, প্রশিক্ষণ এবং সাংস্কৃতিক প্রচারের মাধ্যমে ছৌ নৃত্যের ঐতিহ্য উদযাপন।
+                </p>
+                <div class="w-24 h-1 bg-[#8ec92b] mx-auto mt-5 rounded-full"></div>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Service 1 -->
+                <div
+                    class="group bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 flex flex-col gap-4">
+
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="./imagees/stage-program.jpeg" alt="Stage performance Chhau dance"
+                            class="h-[40vh] w-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+                        </div>
+                    </div>
+
+                    <h3
+                        class="text-xl font-semibold dm-sans text-[#3b3b3b] group-hover:text-[#8ec92b] transition duration-300">
+                        Stage Performances / মঞ্চ পরিবেশনা
+                    </h3>
+
+                    <p class="text-gray-700 dm-sans leading-relaxed">
+                        Live traditional Chhau dance performances for events, cultural festivals, and private functions.
+                        <br><br>
+                        বিভিন্ন অনুষ্ঠান, সাংস্কৃতিক উৎসব এবং ব্যক্তিগত অনুষ্ঠানের জন্য ঐতিহ্যবাহী ছৌ নৃত্যের সরাসরি
+                        পরিবেশনা।
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="group bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 flex flex-col gap-4">
+
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="./imagees/work-shop-trainning.jpeg" alt="Chhau dance workshop training"
+                            class="h-[40vh] w-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+                        </div>
+                    </div>
+
+                    <h3
+                        class="text-xl font-semibold dm-sans text-[#3b3b3b] group-hover:text-[#8ec92b] transition duration-300">
+                        Workshops & Training / কর্মশালা ও প্রশিক্ষণ
+                    </h3>
+
+                    <p class="text-gray-700 dm-sans leading-relaxed">
+                        Professional Chhau dance workshops and training sessions for beginners and advanced learners.
+                        <br><br>
+                        নতুন ও অভিজ্ঞ শিক্ষার্থীদের জন্য পেশাদার ছৌ নৃত্যের প্রশিক্ষণ ও কর্মশালা।
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="group bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 flex flex-col gap-4">
+
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="./imagees/program2.jpeg" alt="Chhau dance festival show"
+                            class="h-[40vh] w-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+                        </div>
+                    </div>
+
+                    <h3
+                        class="text-xl font-semibold dm-sans text-[#3b3b3b] group-hover:text-[#8ec92b] transition duration-300">
+                        Event & Festival Shows / অনুষ্ঠান ও উৎসব পরিবেশনা
+                    </h3>
+
+                    <p class="text-gray-700 dm-sans leading-relaxed">
+                        Organizing Chhau dance performances for cultural events, school programs, and community
+                        festivals.
+                        <br><br>
+                        সাংস্কৃতিক অনুষ্ঠান, স্কুল প্রোগ্রাম এবং সামাজিক উৎসবের জন্য ছৌ নৃত্য পরিবেশনা।
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div
+                    class="group bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 flex flex-col gap-4">
+
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="./imagees/calchural-program.jpeg" alt="Customized Chhau dance program"
+                            class="h-[40vh] w-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+                        </div>
+                    </div>
+
+                    <h3
+                        class="text-xl font-semibold dm-sans text-[#3b3b3b] group-hover:text-[#8ec92b] transition duration-300">
+                        Customized Dance Programs / কাস্টম নৃত্য পরিবেশনা
+                    </h3>
+
+                    <p class="text-gray-700 dm-sans leading-relaxed">
+                        Tailored Chhau dance performances for weddings, corporate events, and special celebrations.
+                        <br><br>
+                        বিবাহ, কর্পোরেট অনুষ্ঠান ও বিশেষ উৎসবের জন্য কাস্টম ছৌ নৃত্য পরিবেশনা।
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div
+                    class="group bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 flex flex-col gap-4">
+
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="./imagees/program3.jpeg" alt="Chhau dance cultural promotion"
+                            class="h-[40vh] w-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+                        </div>
+                    </div>
+
+                    <h3
+                        class="text-xl font-semibold dm-sans text-[#3b3b3b] group-hover:text-[#8ec92b] transition duration-300">
+                        Cultural Promotion / সাংস্কৃতিক প্রচার
+                    </h3>
+
+                    <p class="text-gray-700 dm-sans leading-relaxed">
+                        Promoting traditional Chhau dance nationally and internationally through performances and
+                        workshops.
+                        <br><br>
+                        পরিবেশনা ও প্রশিক্ষণের মাধ্যমে দেশ-বিদেশে ঐতিহ্যবাহী ছৌ নৃত্যের প্রচার।
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- script added from here -->
+    <script>
+        const readMoreBtn = document.getElementById("readMoreBtn");
+        const moreText = document.getElementById("moreText");
+
+        readMoreBtn.addEventListener("click", () => {
+            moreText.classList.toggle("hidden");
+
+            if (moreText.classList.contains("hidden")) {
+                readMoreBtn.textContent = "Read More";
+            } else {
+                readMoreBtn.textContent = "Read Less";
+            }
+        });
+    </script>
+
+
+
+    <!-- JS Script Added  -->
+    <script>
+        const slider = document.getElementById("slider");
+        const heroTitle = document.getElementById("heroTitle");
+
+        const heroBn = document.getElementById("heroBn");
+        const heroEn = document.getElementById("heroEn");
+        const heroMain = document.getElementById("heroMain");
+
+        const bookBtn = document.getElementById("bookBtn");
+        const moreBtn = document.getElementById("moreBtn");
+
+        const slidesContent = [
+            {
+                bn: "ঝাড়গ্রামের ছৌ নৃত্য",
+                en: "West Bengal Chhau Dance",
+                main: "Traditional Masked Dance of India",
+                bookText: "Book Now",
+                bookLink: "#book-show",
+                moreText: "More About Chhau",
+                moreLink: "#about-chhau"
+            },
+            {
+                bn: "শক্তি ও ছন্দের শিল্প",
+                en: "Power & Martial Art",
+                main: "Experience the Spirit of Chhau Dance",
+                bookText: "Join Workshop",
+                bookLink: "#workshop",
+                moreText: "Learn the Art",
+                moreLink: "#learn-chhau"
+            },
+            {
+                bn: "বাঙালির সাংস্কৃতিক ঐতিহ্য",
+                en: "Cultural Heritage of Bengal",
+                main: "Preserving an Ancient Dance Form",
+                bookText: "Watch Performance",
+                bookLink: "#performance",
+                moreText: "Explore Heritage",
+                moreLink: "#heritage"
+            }
+        ];
+
+        let index = 0;
+
+        setInterval(() => {
+            index = (index + 1) % slidesContent.length;
+
+            // Slide Image
+            slider.style.transform = `translateX(-${index * 100}%)`;
+
+            // Fade Content
+            heroTitle.classList.add("opacity-0");
+
+            setTimeout(() => {
+                heroBn.textContent = slidesContent[index].bn;
+                heroEn.textContent = slidesContent[index].en;
+                heroMain.textContent = slidesContent[index].main;
+
+                bookBtn.textContent = slidesContent[index].bookText;
+                bookBtn.href = slidesContent[index].bookLink;
+
+                moreBtn.textContent = slidesContent[index].moreText;
+                moreBtn.href = slidesContent[index].moreLink;
+
+                heroTitle.classList.remove("opacity-0");
+            }, 300);
+
+        }, 4000);
+    </script>
+
+    <!-- menu script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuBtn = document.getElementById("menuBtn");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const closeMenu = document.getElementById("closeMenu");
+            const pagesToggle = document.getElementById("pagesToggle");
+            const pagesMenu = document.getElementById("pagesMenu");
+
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.remove("-translate-y-full");
+                mobileMenu.classList.add("translate-y-0");
+            });
+
+            closeMenu.addEventListener("click", () => {
+                mobileMenu.classList.add("-translate-y-full");
+                mobileMenu.classList.remove("translate-y-0");
+                pagesMenu.classList.add("hidden");
+            });
+
+            pagesToggle.addEventListener("click", () => {
+                pagesMenu.classList.toggle("hidden");
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
